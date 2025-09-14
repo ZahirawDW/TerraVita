@@ -1,0 +1,88 @@
+
+/* big pic with the text */
+.homeimg{
+  padding-top: 30px;
+  background-size: cover;
+  height: 600px;
+  width: 85%;
+  position: relative;
+  float: left;
+}
+.logo2,.welcome-text{
+  position: absolute;
+  top: 58%;
+  left: 25%;
+  transform: translateX(-50%) translateY(-50%);
+  color: rgb(255, 250, 231);
+  font-size: 2rem;
+}
+.logo2{
+  top: 47%;
+  margin-bottom: 10px;
+}
+/* side pic of season */
+.season{
+  width: 170px;
+  height: 140px;
+  background-color:  rgb(143, 197, 248);
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+.season:hover{
+  transform: scale(1.04);
+}
+.spring1{
+  padding-top: 45px;
+}
+.season img{
+  width: 160px;
+  height: 100px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+.season h2{
+  margin-top: 0;
+  text-align: center;
+}
+.season a{
+  text-decoration: none;
+  color: black;
+}
+#main a:hover{
+  color: white;
+}
+.contenair{
+  overflow: hidden;
+  float: right;
+} 
+/* For mobile phones (screen width up to 480px) */
+@media (max-width: 480px) {
+  header img {
+    height: 450px;
+    width: 480px; /* Full width */
+    padding-top: 170px;
+  }
+
+  .logo2{
+    top: 75%;
+    left: 50%;
+  }
+  .welcome-text{
+    font-size: 1rem;
+    top:90%;
+    left:50%;
+  }
+  .season {
+    width: 120px;
+    height: 115px;
+    margin-bottom: 5px;
+  }
+
+  .season img {
+    width: 100px;
+    height: 80px;
+  }
+}
+
+

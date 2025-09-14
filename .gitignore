@@ -1,0 +1,19 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files (VS Code)
+.vscode/
+*.swp
+*.swo
+*~
+
+
+# Runtime files
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp

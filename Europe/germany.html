@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germany Throughout the Seasons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .season {
+            margin-bottom: 40px;
+        }
+        .season h2 {
+            font-size: 2em;
+            color: #16a085;
+            border-bottom: 2px solid #16a085;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .places {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .place {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .place img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+        .place-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .place h3 {
+            font-size: 1.6em;
+            margin: 20px 0;
+            color: #34495e;
+        }
+        .place p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        .activities {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1em;
+            color: #2c3e50;
+        }
+        .activities li {
+            margin: 8px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Explore Germany Throughout the Seasons</h1>
+            <p>Discover the best places and activities to do in Germany, across all seasons!</p>
+        </div>
+        <!-- Spring -->
+        <div class="season">
+            <h2>Spring</h2>
+            <div class="places">
+                <!-- Berlin -->
+                <div class="place">
+                    <img src="../images/A spring stroll around West Kreuzberg in Berlin.jpg" alt="Berlin in Spring">
+                    <div class="place-content">
+                        <h3>Berlin</h3>
+                        <p>Discover the vibrant city of Berlin during the beautiful spring season.</p>
+                        <ul class="activities">
+                            <li>Visit the Brandenburg Gate</li>
+                            <li>Explore the Berlin Wall Memorial</li>
+                            <li>Relax in Tiergarten Park</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Munich -->
+                <div class="place">
+                    <img src="../images/Marienplatz in Munich, Germany.jpg" alt="Munich in Spring">
+                    <div class="place-content">
+                        <h3>Munich</h3>
+                        <p>Enjoy the sights of Munich with blooming gardens and parks in spring.</p>
+                        <ul class="activities">
+                            <li>Visit Marienplatz Square</li>
+                            <li>Explore Nymphenburg Palace</li>
+                            <li>Walk through the English Garden</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Summer -->
+        <div class="season">
+            <h2>Summer</h2>
+            <div class="places">
+                <!-- Lake Constance -->
+                <div class="place">
+                    <img src="../images/48 hour Guide to Lake Constance.jpg" alt="Lake Constance in Summer">
+                    <div class="place-content">
+                        <h3>Lake Constance</h3>
+                        <p>Relax and enjoy the sunny shores of Lake Constance during the summer months.</p>
+                        <ul class="activities">
+                            <li>Swim and boat on the lake</li>
+                            <li>Explore the beautiful lakeside villages</li>
+                            <li>Visit Mainau Island</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Neuschwanstein Castle -->
+                <div class="place">
+                    <img src="../images/Schloss Neuschwanstein.jpg" alt="Neuschwanstein Castle in Summer">
+                    <div class="place-content">
+                        <h3>Neuschwanstein Castle</h3>
+                        <p>Experience the fairy tale castle amidst the lush greenery of summer.</p>
+                        <ul class="activities">
+                            <li>Tour the castle</li>
+                            <li>Explore the surrounding forests</li>
+                            <li>Visit nearby Hohenschwangau Castle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fall -->
+        <div class="season">
+            <h2>Fall</h2>
+            <div class="places">
+                <!-- Black Forest -->
+                <div class="place">
+                    <img src="../images//The Black Forest, Germany.jpg" alt="Black Forest in Fall">
+                    <div class="place-content">
+                        <h3>Black Forest</h3>
+                        <p>Experience the stunning fall foliage and vibrant colors of the Black Forest.</p>
+                        <ul class="activities">
+                            <li>Hike the Black Forest Trails</li>
+                            <li>Visit Freiburg's Old Town</li>
+                            <li>Enjoy local food and drink</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Heidelberg -->
+                <div class="place">
+                    <img src="../images/Heidelberg Castle in autumn.jpg" alt="Heidelberg in Fall">
+                    <div class="place-content">
+                        <h3>Heidelberg</h3>
+                        <p>Walk through the charming streets of Heidelberg as the fall colors transform the town.</p>
+                        <ul class="activities">
+                            <li>Explore Heidelberg Castle</li>
+                            <li>Stroll along the Philosopher's Walk</li>
+                            <li>Enjoy the fall foliage by the river</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Winter -->
+        <div class="season">
+            <h2>Winter</h2>
+            <div class="places">
+                <!-- Garmisch-Partenkirchen -->
+                <div class="place">
+                    <img src="../images/Things to Do Garmisch Partenkirchen-A Complete Guide to Garmisch — Abroad Wife-Familly Travel.jpg" alt="Garmisch-Partenkirchen in Winter">
+                    <div class="place-content">
+                        <h3>Garmisch-Partenkirchen</h3>
+                        <p>Enjoy skiing and winter activities in the beautiful Bavarian Alps.</p>
+                        <ul class="activities">
+                            <li>Skiing and snowboarding</li>
+                            <li>Visit the Zugspitze mountain</li>
+                            <li>Explore the charming alpine village</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Dresden -->
+                <div class="place">
+                    <img src="../images/Dresden _ photo idea _instagram.jpg" alt="Dresden in Winter">
+                    <div class="place-content">
+                        <h3>Dresden</h3>
+                        <p>Discover the beauty of Dresden, with its historic architecture and Christmas markets during winter.</p>
+                        <ul class="activities">
+                            <li>Visit the Frauenkirche</li>
+                            <li>Explore the Striezelmarkt Christmas market</li>
+                            <li>Admire the winter lights and decorations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
