@@ -1,88 +1,245 @@
-  /* top bar  */
-nav > a {
-  text-decoration: none; 
+body{
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: black; 
-  padding: 10px 15px ;
-  transition: color 0.3s ease;
+  padding-top: 25px; /* To prevent content from being hidden behind the fixed navbar */
 }
-.logo{
-  font-size: 40px;
-  font-weight: bold;
-  margin-left: 10px ;
+
+/* ===== MOBILE MENU TOGGLE ===== */
+.mobile-menu-toggle {
+  display: none;
+  background-color: transparent; 
+  border: none;
 }
-.tobnavbar{ 
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0 4px 10px;
+  transition: all 0.3s ease;
+}
+
+/* ===== MAIN NAVBAR CONTAINER ===== */
+ .topnavbar{ 
+  display: flex;
   position: fixed;
   top:0;
   left:0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
   height: 50px; 
   background-color: #fffff0; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  z-index: 10;
-  transition: 0.3s ease;
+  z-index: 1000;
 }
-.box:hover{ 
+
+/* ===== NAVIGATION LINKS CONTAINER ===== */
+.links-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+/* ===== NAVIGATION LINKS ===== */
+.links-container a{
+  text-decoration: none;
+  color: black; 
+  padding: 10px 15px ;
+  transition: color 0.3s ease;
+}
+
+/* ===== LOGO STYLES ===== */
+.links-container .nav-logo{
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 10px ;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.nav-links:hover{ 
   background-color: rgb(119, 200, 254);
   color:white ;
-  padding: 15px 30px;
+  margin: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   transform: scale(1.05);
   transition: all 0.3s ease;
 } 
 
-footer{
-  background-color: #333; 
-  color: #fff; 
-  text-align:center; 
-  padding: 20px;
-  clear: both;
-}
-footer a{
-  text-decoration: none;
-  color: #fff; 
-  margin: 0 10px;
-}
-.footer-message {
-  margin-top: 10px;
-  font-style: italic;
-}
-/* For tablets (screen width up to 768px) */
-@media (max-width: 768px) {
-  .tobnavbar {
-    flex-direction: row;
-    height: auto;
-    padding: 10px 0;
-  }
-  .logo {
-    font-size: 30px;
-    margin: 10px 0;
-  }
-  nav > a {
-    display: block;
-    padding: 5px 0;
-    text-align: center;
-  }
+
+
+
+
+/* ===== SEARCH CONTAINER ===== */
+.search-container{
+  position: relative;
+  margin:0 10px;
 }
 
-/* For mobile phones (screen width up to 480px) */
-@media (max-width: 480px) {
-  .tobnavbar {
-    justify-content: space-between;
-    text-align: center;
-  }
-  .logo {
-    font-size: 20px;
-    margin: 5px 0;
-  }
-  nav > a {
-    font-size: 10px;
-    padding: 5px 0;
-  }
-  .box:hover {
-    padding: 10px 20px;
-  }
+/* ===== SEARCH INPUT FIELD ===== */
+/* Base styles for the search input with compact initial state */
+.search-container input{
+  font-weight: bold;
+  color: gray;
+  width: 40px;
+  height: 45px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  z-index: 0;
+  transition: width 2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.84);
+} 
+
+/* ===== PLACEHOLDER STYLING ===== */
+/* Hide placeholder text when search is collapsed */
+.search-container input::placeholder{
+  color: transparent;
+  transition: color 1s;
+}
+
+/* ===== SEARCH ICON ===== */
+/* Styled magnifying glass icon that triggers expansion */
+.search-icon{
+  width: 35px;
+  height: 28px;
+  text-align: center;
+  background-color: #9601f9;
+  color:  white;
+  padding-top: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 3px;
+  top: 2.5px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* ===== EXPANDED SEARCH STATE ===== */
+/* Styles applied when search is expanded via JavaScript */
+.search-container input.search-expanded{
+  width: 180px;
+  padding: 0 40px 0 20px;
+}
+
+/* ===== EXPANDED PLACEHOLDER ===== */
+/* Show placeholder text when search is expanded */
+.search-container input.search-expanded::placeholder{
+  color: gray;
+}
+
+
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+/* Container for the toggle switch with pill-shaped design */
+/* Provides visual representation of light/dark mode state */
+.btn{
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: lightgray;
+  position: relative;
+}
+
+/* ===== TOGGLE THUMB/SLIDER ===== */
+/* The circular element that moves left/right to indicate state */
+/* Visual indicator of current mode selection */
+.btn span{
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 3px;
+  top: 2px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: transform 0.5s, background-color 0.5s;
+}
+
+/* ===== DARK MODE GLOBAL STYLES ===== */
+/* Applied to body or parent container when dark mode is active */
+/* Transforms entire color scheme to dark theme */
+.dark-mode{
+  transition: background-color 0.5s;
+  background-color: black;
+  color: white;
+}
+/* ===== DARK MODE THUMB/SLIDER ===== */
+/* Thumb transformation when dark mode is activated */
+/* Moves to right side and changes color for visual feedback */
+.dark-mode .btn span{
+  background-color: black;
+  transform: translateX(58px);
+}
+
+
+
+
+/* ===== LANGUAGE ICON CONTAINER ===== */
+/* Wrapper element for the language selector component */
+/* Provides spacing and positioning within the navbar */
+.language-icon {
+  margin-left: 10px;             
+  display: flex;                  /* Enable flexbox for vertical centering */
+  align-items: center;          
+}
+
+/* ===== LANGUAGE TOGGLE BUTTON ===== */
+/* Interactive button for language selection functionality */
+/* Designed to be minimal and blend with navbar aesthetics */
+.language-icon .language-toggle {
+  background: none;              
+  border: none;                   
+  cursor: pointer;              
+  color: inherit;                 
+  padding: 8px;                  
+  border-radius: 4px;            
+  transition: background-color 0.2s ease;
+}
+
+/* ===== HOVER STATES ===== */
+/* Visual feedback when interacting with language button */
+.language-icon .language-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1); 
+}
+
+/* ===== LANGUAGE ICON STYLING ===== */
+/* Font Awesome icon customization within the button */
+.language-icon .language-toggle i {
+  margin-top: 50%;             
+  font-size: 2rem;  
+  transition: transform 0.2s ease; 
+}
+
+/* ===== INTERACTIVE FEEDBACK ===== */
+/* Visual response to user interactions */
+.language-icon .language-toggle:hover i {
+  transform: scale(1.1);          /
+}
+
+.language-icon .language-toggle:active i {
+  transform: scale(0.95);        
+}
+
+
+
+/* ===== AUTHENTICATION LINKS ===== */
+.auth-links{
+  margin-left: auto; /* Pushes auth links to the far right */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between Login and Sign Up */
+  margin-right: 10px; /* Right margin for spacing */
+}
+.auth-links a{
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgb(19, 193, 19);
+  color: black;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+.auth-links a:hover{
+  background-color: rgb(119, 200, 254);
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
