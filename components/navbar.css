@@ -1,42 +1,42 @@
-body{
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding-top: 25px; /* To prevent content from being hidden behind the fixed navbar */
+:root{
+  --background-color: #ffffe9;
+  --secondary-color: rgb(64, 116, 176);
 }
 
-/* ===== MOBILE MENU TOGGLE ===== */
-.mobile-menu-toggle {
-  display: none;
-  background-color: transparent; 
-  border: none;
-}
-.hamburger-line {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 4px 0 4px 10px;
-  transition: all 0.3s ease;
+body{
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-top: 80px;
+  transition: all 0.8s ease;
 }
 
 /* ===== MAIN NAVBAR CONTAINER ===== */
- .topnavbar{ 
-  display: flex;
+ .topnavbar{
+  justify-content:space-between;
   position: fixed;
   top:0;
   left:0;
   width: 100%;
-  height: 50px; 
-  background-color: #fffff0; 
+  height: 70px;
+  background-color: var(--background-color); 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   z-index: 1000;
+  transition: all 0.8s ease;
+}
+
+.topnavbar, .right-container, .links-container{
+  display: flex;
+  align-items: center;
+}
+
+/* RIGHT CONTAINER STYLES */
+.right-container{
+  gap: 15px;
 }
 
 /* ===== NAVIGATION LINKS CONTAINER ===== */
 .links-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
+  justify-content: space-between;
+  gap: 18px;
 }
 
 /* ===== NAVIGATION LINKS ===== */
@@ -44,11 +44,11 @@ body{
   text-decoration: none;
   color: black; 
   padding: 10px 15px ;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* ===== LOGO STYLES ===== */
-.links-container .nav-logo{
+.nav-logo{
   font-size: 40px;
   font-weight: bold;
   margin-left: 10px ;
@@ -56,23 +56,20 @@ body{
 
 /* ===== HOVER EFFECTS ===== */
 .nav-links:hover{ 
-  background-color: rgb(119, 200, 254);
+  font-weight: bold;
+  background-color: var(--secondary-color);
   color:white ;
-  margin: 10px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   transform: scale(1.05);
-  transition: all 0.3s ease;
+  transition:  transform 0.3s ease, background-color 0.3s ease;
 } 
-
-
-
 
 
 /* ===== SEARCH CONTAINER ===== */
 .search-container{
   position: relative;
-  margin:0 10px;
+  margin: 0 10px;
 }
 
 /* ===== SEARCH INPUT FIELD ===== */
@@ -86,7 +83,7 @@ body{
   border: none;
   border-radius: 20px;
   z-index: 0;
-  transition: width 2s;
+  transition: width 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.84);
 } 
 
@@ -94,7 +91,7 @@ body{
 /* Hide placeholder text when search is collapsed */
 .search-container input::placeholder{
   color: transparent;
-  transition: color 1s;
+  transition: color 0.2s;
 }
 
 /* ===== SEARCH ICON ===== */
@@ -103,17 +100,16 @@ body{
   width: 35px;
   height: 28px;
   text-align: center;
-  background-color: #9601f9;
+  background-color: var(--secondary-color);
   color:  white;
   padding-top: 10px;
   border-radius: 50%;
   position: absolute;
-  right: 3px;
-  top: 2.5px;
+  right: 2.5px;
+  top: 3px;
   z-index: 1;
   cursor: pointer;
 }
-
 /* ===== EXPANDED SEARCH STATE ===== */
 /* Styles applied when search is expanded via JavaScript */
 .search-container input.search-expanded{
@@ -132,11 +128,11 @@ body{
 /* Container for the toggle switch with pill-shaped design */
 /* Provides visual representation of light/dark mode state */
 .btn{
-  width: 100px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   border: none;
   border-radius: 20px;
-  background-color: lightgray;
+  background-color: #fae5ab; /* Orange background for light mode */
   position: relative;
 }
 
@@ -145,32 +141,58 @@ body{
 /* Visual indicator of current mode selection */
 .btn span{
   position: absolute;
-  width: 36px;
-  height: 36px;
+  width: 25px;
+  height: 25px;
   left: 3px;
   top: 2px;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  transition: transform 0.5s, background-color 0.5s;
+  transition: all 0.8s ease;
+}
+
+/* the sun icon */
+.btn span i{
+  display: block;
+  font-size: 1.1rem;
+  color: rgb(255, 145, 0);
+  position: absolute;
+  top: 3.2px;
+  left: 3px;
 }
 
 /* ===== DARK MODE GLOBAL STYLES ===== */
 /* Applied to body or parent container when dark mode is active */
 /* Transforms entire color scheme to dark theme */
 .dark-mode{
-  transition: background-color 0.5s;
   background-color: black;
   color: white;
+  transition: all 0.8s ease;
 }
+
+.dark-mode .topnavbar{
+  background-color: #333; /* Darker navbar background for dark mode */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.368); /* Lighter shadow for dark mode */
+  transition: all 0.8s ease;
+}
+
+.dark-mode .nav-links,.dark-mode .nav-logo{
+  color: white; /* Light text for dark mode */
+}
+
+.dark-mode .btn{
+  background-color: var(--secondary-color); /* Change toggle background for dark mode */
+}
+.dark-mode .language-icon .language-toggle i{
+  color: rgb(198, 216, 235);
+}
+
 /* ===== DARK MODE THUMB/SLIDER ===== */
 /* Thumb transformation when dark mode is activated */
 /* Moves to right side and changes color for visual feedback */
 .dark-mode .btn span{
-  background-color: black;
-  transform: translateX(58px);
+  background-color: rgb(255, 255, 255);
+  transform: translateX(30px);
 }
-
-
 
 
 /* ===== LANGUAGE ICON CONTAINER ===== */
@@ -204,15 +226,16 @@ body{
 /* ===== LANGUAGE ICON STYLING ===== */
 /* Font Awesome icon customization within the button */
 .language-icon .language-toggle i {
-  margin-top: 50%;             
+  display: block;            
   font-size: 2rem;  
+  color: var(--secondary-color);
   transition: transform 0.2s ease; 
 }
 
 /* ===== INTERACTIVE FEEDBACK ===== */
 /* Visual response to user interactions */
 .language-icon .language-toggle:hover i {
-  transform: scale(1.1);          /
+  transform: scale(1.1);          
 }
 
 .language-icon .language-toggle:active i {
@@ -223,23 +246,170 @@ body{
 
 /* ===== AUTHENTICATION LINKS ===== */
 .auth-links{
-  margin-left: auto; /* Pushes auth links to the far right */
   display: flex;
-  align-items: center;
-  gap: 10px; /* Space between Login and Sign Up */
-  margin-right: 10px; /* Right margin for spacing */
+  gap: 5px; /* Space between Login and Sign Up */
+  margin-right: 4px;
 }
 .auth-links a{
   text-decoration: none;
   font-weight: bold;
-  background-color: rgb(19, 193, 19);
-  color: black;
-  padding: 8px 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px 10px;
   border-radius: 20px;
 }
 .auth-links a:hover{
-  background-color: rgb(119, 200, 254);
-  color: white;
-  transform: scale(1.05);
+  background-color: rgb(38, 38, 134);
+}
+
+
+/* ===== MOBILE MENU TOGGLE ===== */
+.mobile-menu-toggle {
+  display: none;
+  background-color: transparent; 
+  border: none;
+}
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0 4px 8px;
   transition: all 0.3s ease;
+}
+
+/* Hamburger to X animation */
+
+/* Target the button when active */
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 5px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -7px);
+}
+
+/* ====Media Queries==== */
+/* Mobile Small (0 - 479px) */
+@media (max-width: 479px) {
+  body{
+    padding-top: 80px !important;
+  }
+  .topnavbar {
+    flex-direction: column;
+    width: 100%;
+    max-height: 25px;
+    padding: auto;
+  } 
+
+  .mobile-menu-toggle {
+    display: block;
+    align-self: flex-start;
+    margin: 20px 10px 0 0; /* aligns to the left */
+  }
+ 
+  .links-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  .links-container .nav-logo{
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 22px;
+  }
+  
+  .links-container .nav-links{
+    display: none;
+    margin-top: 20px;
+    padding: 0 10px 0 5px;
+    font-size: 1.2em;
+    gap: 12px;
+  }
+
+  .search-container{
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    z-index: 1;
+  }
+
+  .btn{
+    position: absolute;
+    top: 18px;
+    right: 105px;
+  }
+  .language-icon{
+    position: absolute;
+    top: 25px;
+    right: 50px;  
+  }
+
+  .auth-links{
+    display: none;
+    margin: 0 0 20px;
+  }
+  .nav-links.menu-open, .auth-links.menu-open{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px !important;
+  }
+  .topnavbar.menu-height{
+    height: auto;
+    max-height: 120px !important;
+  }
+}
+
+/* large screens  */
+@media (min-width: 480px) {
+  .topnavbar{
+    height: 70px !important;
+  }
+  .nav-links,
+  .auth-links {
+      display: block; /* Force visible */
+  }
+}
+
+/* Mobile large (480px - 767px) */  
+@media (max-width: 767px) {
+  body{
+    padding-top: 120px;
+  }
+  .topnavbar {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    padding: 0 0 50px;
+  }
+  .links-container{
+    justify-content: end;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+  }
+}
+
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1048px) {
+  body{
+    padding-top: 130px;
+  }
+  .topnavbar {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 120px !important;
+    padding: 8px 20px;
+  }
+  .links-container{
+    justify-content: space-around;
+    margin-top: 0;
+  }
 }
