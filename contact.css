@@ -1,97 +1,180 @@
+/* basics body style with fixed background */
 body {
-  font-family: Arial, sans-serif;
+  background-image: url('images/contactBackground.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  padding-top: 50px;
 }
-header {
-  background-color: #333;
-  color: white;
+
+/* Header section */
+.hero-section {
+  margin-top: 20px;
   padding: 10px 0;
   text-align: center;
 }
-header h1 {
-  margin: 0;
-  font-size: 2em;
+
+.hero-section p{
+  font-style: italic;
 }
-header span{
-  font-style:italic;
+
+/* main content */
+.contact-container{
+  margin: 20px 10px;
 }
-.contact-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-.contact-section h2 {
-  margin-bottom: 15px;
-  font-size: 2.5em;
-  color: #007BFF;
-}
-.contact-section p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.contact-form label {
-  font-size: 1.1em;
-  margin-bottom: 5px;
-  color: #333;
-  text-align: left;
-  animation: form 2s;
-}
-@keyframes form {
-  0%{
-    transform:scale(0)
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-.contact-form input,
-.contact-form textarea {
-  font-size: 1em;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-}
-/*send button*/
-.contact-form button {
-  background-color: #007BFF;
-  color: white;
-  font-size: 1.1em;
+
+/* contact section */
+.contact-form{
+  backdrop-filter: blur(20px);
+  width: 60%;
+  margin: auto;
   padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+}
+
+/* universal form elements styling */
+.contact-form label,
+.contact-form input:not([type="checkbox"]),
+.travel-experience,
+.sign-in-p,
+.error-message,
+#preferred-destination,
+#message,
+#submit-button {
+  display: block; 
+  width: 90%;
+  padding: 15px 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.contact-form h2{
+  text-align: center;
+  font-size: 2.1em;
+  text-shadow: 1px 1px 10px white;
+}
+
+.contact-form label:not([for*="experience"]):not([class="sign-in-p"]){
+  text-transform: uppercase;
+}
+
+/* Required fields indicator */
+.contact-form label[for]:not([for*="experience"]):not([for^="img"])::after {
+  content: "*";
+  color: #e74c3c;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Checkbox styling */
+.contact-form input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
   cursor: pointer;
 }
-button:hover {
-  background-color: #0056b3;
-}
-.contact-info {
-  margin-top: 40px;
+
+.contact-form label[for*="experience"]{
   font-size: 1.1em;
+  cursor: pointer;
 }
-.contact-info p {
-  margin: 10px 0;
+
+/* Travel experience other text */
+#travel-experience-other-text{
+  display: none;
 }
-footer {
-  background-color: #333;
-  color: white;
-  padding: 15px 0;
+
+
+#message {
+  resize: vertical;
+}
+
+
+
+#submit-button {
+  background-image: linear-gradient(to right, #43cea2 0%, #185a9d  51%, #43cea2  100%);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 30px;
+  box-shadow: 1px 1px 4px 6px rgba(4, 4, 4, 0.386);
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-position: right center; 
+  color: #000000;
+  text-decoration: none;
+  box-shadow: 0 0 10px #eeeeeebc;
+}
+
+.sign-in-p{
   text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
-footer p {
-  margin: 0;
+
+.sign-in-p a{
+  text-decoration: none;
+  color: #ff0000;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.87);
+}
+/* Dark mode styles */
+.dark-mode{
+  background-image: url('images/contactBackgroundDark.jpg');
+}
+.dark-mode .contact-form{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+
+/* textarea counter */
+.counter{
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+
+/* Responsive design for smaller screens */
+/* NOTE: I use the % units so they are responsive */
+
+@media (max-width: 480px) {
+  body{
+    padding-right: 10px;
+  }
+  .contact-form {
+    width: 95%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section{
+    margin-top: 70px;
+  }
+  .contact-form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px){
+  .hero-section {
+    margin-top: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section{
+    margin-top: 40px;
+  }
+}
+
+
+.error-message{
+  color: red;
 }

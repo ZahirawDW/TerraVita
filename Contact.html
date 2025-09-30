@@ -15,7 +15,7 @@
   <div id="navbar-container"></div>
 
   <!-- Header Section -->
-  <header>
+  <header class="hero-section">
     <h1>Contact TerraVita</h1>
     <h2>Start Your Journey - We'll Make It Perfect</h2>
     <p>We'd love to hear from you!</p>
@@ -25,118 +25,88 @@
   <main class="contact-container">
 
     <!-- Contact Section -->
-    <div class="contact-form-section">
-      <form class="contact-form">
-        <h2>Get in Touch</h2>
+    <form class="contact-form" action="#" method="post">
+      <h2>Get in Touch</h2>
 
-        <!-- Personal Information -->
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+      <!-- Personal Information -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
 
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
 
-        <label for="phone">Phone Number *</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
 
-        <label for="location">Location *</label>
-        <input type="text" id="location" name="location" placeholder="Your location" required>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="Your location" required>
 
-        <!-- Travel Experience Selection -->
-        <fieldset class="travel-experience-fieldset">
-            <legend class="travel-experience-legend">What type of travel experience? *</legend>
+      <!-- Travel Experience Selection -->
+      <div class="travel-experience-container">
+          <p class="travel-experience">What type of travel experience</p>
 
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-family" name="travel-experience" value="family vacation">
-                <label for="travel-experience-family">Family Vacation</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-adventure" name="travel-experience" value="adventure">
-                <label for="travel-experience-adventure">Adventure</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="trgitavel-experience-business" name="travel-experience" value="business trip">
-                <label for="travel-experience-business">Business Trip</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-relaxation" name="travel-experience" value="relaxation">
-                <label for="travel-experience-relaxation">Relaxation</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-nature" name="travel-experience" value="nature">
-                <label for="travel-experience-nature">Nature</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-luxury" name="travel-experience" value="luxury">
-                <label for="travel-experience-luxury">Luxury</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-romance" name="travel-experience" value="romance">
-                <label for="travel-experience-romance">Romance</label>
-            </div>
-            
-            <div class="checkbox-option">
-                <input type="checkbox" id="travel-experience-other" name="travel-experience" value="other">
-                <label for="travel-experience-other">Other</label>
-            </div>
-        </fieldset>
+          <label for="travel-experience-solo">
+            <input type="checkbox" id="travel-experience-solo" name="travel-experience" value="solo travel">Solo Travel
+          </label>
 
-        <!-- Enhanced: Hidden by default, shows when "Other" is checked -->
-        <input type="text" id="travel-experience-other-text" name="travel-experience-other-text" placeholder="If other, please specify">
+          <label for="travel-experience-family">
+            <input type="checkbox" id="travel-experience-family" name="travel-experience" value="family vacation">Family Vacation
+          </label>
 
-        <label for="preferred-destination">Preferred Destination *</label>
-        <select name="preferred-destination" id="preferred-destination" required>
-          <option value="" disabled selected>Select a destination</option>
-          <option value="europe">Europe</option>
-          <option value="asia">Asia</option>
-          <option value="america">America</option>
-          <option value="africa">Africa</option>
-          <option value="australia">Australia</option>
-          <option value="antarctica">Antarctica</option>
-          <option value="other">Other</option>
-        </select>
+          <label for="travel-experience-adventure">
+            <input type="checkbox" id="travel-experience-adventure" name="travel-experience" value="adventure">Adventure
+          </label>
 
-        <label for="message">Your Message *</label>
-        <textarea id="message" name="message" placeholder="Your message" rows="6" required></textarea>
+          <label for="travel-experience-business">
+            <input type="checkbox" id="travel-experience-business" name="travel-experience" value="business trip">Business Trip
+          </label>
 
-        <label for="img-inspiration">Upload Inspiration Image (optional)</label>
-        <input type="file" id="img-inspiration" name="img-inspiration" accept="image/*">
+          <label for="travel-experience-relaxation">
+            <input type="checkbox" id="travel-experience-relaxation" name="travel-experience" value="relaxation">Relaxation
+          </label>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+          <label for="travel-experience-nature">
+            <input type="checkbox" id="travel-experience-nature" name="travel-experience" value="nature">Nature
+          </label>
 
-    <!-- Motivation Section -->
-    <div class="motivation-section">
-      <h2>Find Yourself in every Journey</h2>
+          <label for="travel-experience-luxury">
+            <input type="checkbox" id="travel-experience-luxury" name="travel-experience" value="luxury">Luxury
+          </label>
 
-      <blockquote class="testimonial">
-        "TerraVita transformed our family vacation into 
-        an unforgettable cultural experience!"
-        <cite>- The Johnson Family</cite>
-      </blockquote>
+          <label for="travel-experience-romance">
+            <input type="checkbox" id="travel-experience-romance" name="travel-experience" value="romance">Romance
+          </label>
 
-      <div class="value-propositions">
-        <h3>Why Choose TerraVita?</h3>
-        <p>✓ Expert Travel Planners</p>
-        <p>✓ Personalized Itineraries</p>
-        <p>✓ Local Experiences</p>
-        <p>✓ Sustainable Adventures</p>
-        <p>✓ 5,000+ Travelers Served</p> 
-        <p>✓ 98% Customer Satisfaction</p>
-        <p>✓ 24/7 Support</p>
-        <p>✓ Best Price Guarantee</p>
-        <p>✓ Exclusive Deals</p>
-        <p>✓ Flexible Booking</p>
+          <label for="travel-experience-other">
+            <input type="checkbox" id="travel-experience-other" name="travel-experience" value="other">Other
+          </label>
       </div>
-      <p>Already a traveler? <a href="#">Sign In</a></p>
-    </div>
+
+      <!-- Enhanced: Hidden by default, shows when "Other" is checked -->
+      <input type="text" id="travel-experience-other-text" name="travel-experience-other-text" placeholder="If other, please specify" required>
+
+      <label for="preferred-destination">Preferred Destination</label>
+      <select name="preferred-destination" id="preferred-destination" required>
+        <option value="" disabled selected>Select a destination</option>
+        <option value="europe">Europe</option>
+        <option value="asia">Asia</option>
+        <option value="america">America</option>
+        <option value="africa">Africa</option>
+        <option value="australia">Australia</option>
+        <option value="antarctica">Antarctica</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Your message" rows="6" required></textarea>
+
+      <!-- Image Upload -->
+      <label for="img-inspiration">Upload Inspiration Image (optional)</label>
+      <input type="file" id="img-inspiration" name="img-inspiration" accept="image/*">
+
+      <button type="submit" id="submit-button">Send Message</button>
+      <p class="sign-in-p">Already a traveler? <a href="#">Sign In</a></p>
+    </form>
   </main>
 
   <!--The footer will be here in the next step-->
@@ -145,5 +115,6 @@
   </footer>
 
   <script src="components/navbar.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
