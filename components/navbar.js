@@ -16,7 +16,6 @@ async function loadNavbar() {
             throw new Error('Navbar container not found');
         }
         container.innerHTML = navbarHTML;
-        console.log('Navbar loaded successfully');
         
     } catch (error) {
         console.error('Error loading navbar:', error);
