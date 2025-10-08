@@ -194,6 +194,10 @@ body{
   transform: translateX(30px);
 }
 
+/* the hamburger menu */
+.dark-mode .hamburger-line{
+  background-color: white;
+}
 
 /* ===== LANGUAGE ICON CONTAINER ===== */
 /* Wrapper element for the language selector component */
