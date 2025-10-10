@@ -1,0 +1,234 @@
+/* Basic style */
+body {
+    margin: 0;
+    padding-top: 40px;
+}
+
+/* page header */
+.header {
+    margin-top: 20px;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Navigation season button */
+.navigation-season{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.destination-btn{
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgb(229, 229, 229);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.destination-btn:hover{
+    color: white;
+}
+.spring-btn:hover{
+    background-color: #62c74e;
+}
+.summer-btn:hover{
+    background-color: #e57144;
+}
+.autumn-btn:hover{
+    background-color: #ab563a;
+}
+.winter-btn:hover{
+    background-color: #6aa5e7;
+}
+.other-btn:hover{
+    background-color: #232323;
+}
+
+.active{
+    background-color: gray;
+}
+
+/* Winter */
+.winter-img{
+    background: url('images/winterDestination.jpg');
+}
+
+/* Summer */
+.summer-img{
+    background: url('images/summerDestination.jpg');
+}
+
+/* Spring */
+.spring-img{
+    background: url('images/springDestination.jpg');
+}
+
+/* Autumn */
+.autumn-img{
+    background: url('images/autumnDestination.jpg');
+}
+
+/* Other */
+.other-img{
+    background: url('images/otherDestination.jpg');
+}
+.other h2{
+    margin-left: 15%;
+    margin-bottom: 2px;
+}
+
+/* Season Descriptions */
+.season-description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 8px 0 15px;
+}
+
+.description{
+    margin-left: 35px;
+    width: 45%;
+}
+
+.description h2{
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 2.2em;
+}
+.description h3{
+    text-align: center;
+}
+.description-image{
+    background-size: cover;
+    background-position: center;
+    width: 450px;
+    height: 55vh;
+    border-radius: 45% 0 0 45%;
+}
+
+
+/* Styling for different seasons */
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.country:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+.country {
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.196);
+}
+.country img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.country h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #4CAF50;
+}
+.country p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 10px;
+}
+
+.country a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.country a:hover {
+    text-decoration: underline;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* .Dark mode */
+
+.dark-mode .country{
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.769);
+}
+
+/* ====Media Queries==== */
+/* Mobile Small (0 - 479px) */
+@media (max-width: 479px) {
+    .navigation-season{
+        padding: 8px 10px;
+        font-size: 0.7em;
+        flex-wrap: wrap;
+    }
+    .season-description{
+        flex-direction: column;
+    }
+    .description{
+        width: 90%;
+        margin: 10px 0 10px 20px ;
+    }
+    .description h2{
+        text-align: center;
+        margin-left: 0;
+    }
+    .description-image{
+        border-radius: 10px;
+        width: 95%;
+        margin: 10px;
+    }
+}
+
+/* Mobile large (480px - 767px) */  
+@media (min-width: 479px) and (max-width: 767px) {
+    .header{
+        margin-top: 55px;
+    }
+    .season-description{
+        margin-top: 40px;
+    }
+    .description-image{
+        margin-left: 10px;
+        width: 45%;
+        height: 75vh;
+        border-radius: 30% 0 0 30%;
+    }
+    .other h2{
+        margin-bottom: -5%;
+        margin-left: 10%;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1048px){
+    .header{
+        margin-top: 65px;
+    }
+    .season-description{
+        margin-top: 40px;
+    }
+    .description-image{
+        border-radius: 30% 0 0 30%;
+    }
+    .other h2{
+        margin-bottom: -5%;
+        margin-left: 10%;
+    }
+}

@@ -3,282 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="WhatsApp Image 2024-12-13 at 13.02.12.jpeg" type="image/jpeg">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="icon" href="TerraVitaLogo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="components/navbar.css">
+  <link rel="stylesheet" href="destination.css">
+  <link rel="stylesheet" href="components/footer.css">
   <title>Explore by Seasons</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-    /* page header */
-    header {
-      background-color: #2c322d;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 0;
-    }
-    header h1 {
-      margin: 0;
-      margin-top: 30px;
-    }
-    .season {
-      margin-bottom: 40px;
-      padding: 20px;
-      border-radius: 10px;
-      color: white;
-    }
-    .season h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
-
-    /* Styling for different seasons */
-    .winter h2{
-     color: #2990ff;
-    }
-    .summer h2{
-      color: #f9df49;
-    }
-    .fall h2{
-      color: #fba842;
-    }
-    .spring h2{
-      color: #6de36d;
-    }
-    .all h2{
-      color: #333;
-    }
-    .countries {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .country:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
-    }
-    .country {
-      width: 200px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .country img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .country h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-      color: #4CAF50;
-    }
-    .country p {
-      font-size: 0.9rem;
-      color: #666;
-      padding: 0 10px;
-    }
-
-    .country a {
-      display: block;
-      margin: 10px 0;
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-    }
-
-    .country a:hover {
-      text-decoration: underline;
-      color: black;
-      transform: scale(1.05);
-    }
-  </style>
 </head>
 <body>
-    <!--top bar-->
-    <nav class="tobnavbar">
-        <a href="homePage.html#main" class="logo">TerraVita</a>
-        <a href="homePage.html" class="box">Home</a>
-        <a href="destination.html" class="box">Destination</a>
-        <a href="gallery.html" class="box">Gallery</a>
-        <a href="Contact.html" class="box">Contact</a>
-    </nav>
-  <header>
-    <h1>Explore the Best Countries by Seasons<br><i>TerraVita</i></h1>
+  <!-- Navbar injected dynamically via components/navbar.js -->
+  <div id="navbar-container"></div>
+
+  <!-- Header of the page -->
+  <header class="header">
+    <h1>TerraVita - Your Seasonal Travel Guide</h1>
+    <p>Explore the Best Countries by Seasons</p>
   </header>
-  <main>
-    <!-- Winter Section -->
-    <section class="season winter" id="winter/">
-      <h2>Winter</h2>
+
+  <!-- Navigation season button -->
+  <div class="navigation-season">
+    <button type="button" class="destination-btn spring-btn">Spring</button>
+    <button type="button" class="destination-btn summer-btn">Summer</button>
+    <button type="button" class="destination-btn autumn-btn">Autumn</button>
+    <button type="button" class="destination-btn winter-btn">Winter</button>
+    <button type="button" class="destination-btn other-btn">Other</button>
+  </div>
+
+  <!-- The main content -->
+  <main> 
+
+    <!-- Spring Section -->
+    <section class="season spring" id="spring">
+      <!-- Spring Description -->
+      <div class="season-description">
+        <div class="description">
+          <h2>Spring</h2>
+          <h3>Season of Renewal and Blossoms</h3>
+          <p>
+            Spring awakens the world with vibrant colors and renewed energy. 
+            As flowers bloom and temperatures become perfect for exploration, this season symbolizes new beginnings and fresh adventures. 
+            Witness cherry blossoms painting landscapes in soft pinks, explore lush gardens coming to life, and enjoy outdoor activities in perfect weather. 
+            Spring invites you to experience nature's rebirth while discovering destinations at their most beautiful and tranquil.
+          </p>
+        </div>
+        <div class="description-image spring-img"></div>
+      </div>
+
+      <!-- Countries Cards -->
       <div class="countries">
         <div class="country">
-          <img src="images/Pin page.jpg" alt="Canada">
-          <h3>Canada</h3>
-          <p>Enjoy snowy landscapes and winter activities.</p>
-          <a href="Amerique/canada.html">Explore Canada</a>
+          <img src="images/japanDestination.jpg" alt="Japan">
+          <h3>Japan</h3>
+          <p>Experience the beauty of cherry blossoms in spring.</p>
+          <a href="Asie/japon.html">Explore Japan</a>
         </div>
         <div class="country">
-          <img src="images/wint1.jpg" alt="Switzerland">
-          <h3>Switzerland</h3>
-          <p>Famous for its stunning Alps and winter resorts.</p>
-          <a href="Europe/switzerland.html">Explore Switzerland</a>
+          <img src="images/netherlandsDestination.jpg" alt="Netherlands">
+          <h3>Netherlands</h3>
+          <p>Visit beautiful tulip fields and picturesque canals.</p>
+          <a href="Europe/nethrlands.html">Explore Netherlands</a>
         </div>
         <div class="country">
-            <img src="images/wint2.jpg" alt="Thailand">
-            <h3>Thailand</h3>
-            <p>Enjoy warm weather and tropical beaches during winter.</p>
-            <a href="Asie/thailand.html">Explore Thailand</a>
+          <img src="images/greeceDestination.jpg" alt="Greece">
+          <h3>Greece</h3>
+          <p>Explore ancient ruins and stunning islands in mild weather.</p>
+          <a href="Europe/greece.html">Explore Greece</a>
         </div>
         <div class="country">
-            <img src="images/Winter in Dubai.jpg" alt="Dubai">
-            <h3>Dubai</h3>
-            <p>Experience luxurious winter sunshine and modern architecture.</p>
-            <a href="Afrique/dubai.html">Explore Dubai</a>
-        </div>
+          <img src="images/USDestination.jpg" alt="United States">
+          <h3>United States</h3>
+          <p>Explore vibrant cities and beautiful parks during springtime.</p>
+          <a href="Amerique/US.html">Explore United States</a>
         </div>
       </div>
     </section>
 
     <!-- Summer Section -->
-    <section class="season summer" id="summer/">
-      <h2>Summer</h2>
+    <section class="season summer" id="summer">
+      <!-- Summer Description -->
+      <div class="season-description">
+        <div class="description">
+          <h2>Summer</h2>
+          <h3>Sunshine and Endless Adventures</h3>
+          <p>
+            Summer brings long, sun-drenched days perfect for exploration and adventure. 
+            It's the season of vibrant energy, where golden beaches, crystal-clear waters, and outdoor festivals create unforgettable memories. 
+            From tropical paradises to cultural hotspots, summer invites you to embrace the warmth and discover new horizons. 
+            Whether you're seeking relaxation on pristine shores or thrilling activities under the sun, this season promises endless possibilities for every traveler.
+          </p>
+        </div>
+        <div class="description-image summer-img"></div>
+      </div>
+
+      <!-- Countries Cards -->
       <div class="countries">
         <div class="country">
-            <img src="images/sychel.jpg" alt="Seychelles">
-            <h3>Seychelles</h3>
-            <p>Relax on pristine beaches and enjoy tropical weather.</p>
-            <a href="Afrique/seychelles.html">Explore Seychelles</a>
+          <img src="images/sychellesDestination.jpg" alt="Seychelles">
+          <h3>Seychelles</h3>
+          <p>Relax on pristine beaches and enjoy tropical weather.</p>
+          <a href="Afrique/seychelles.html" target="_blank">Explore Seychelles</a>
         </div>
         <div class="country">
-            <img src="images/Corcovado.jpg" alt="Brazil">
-            <h3>Brazil</h3>
-            <p>Experience vibrant culture and beautiful beaches.</p>
-            <a href="Amerique/brazil.html">Explore Brazil</a>
+          <img src="images/brazilDestination.jpg" alt="Brazil">
+          <h3>Brazil</h3>
+          <p>Experience vibrant culture and beautiful beaches.</p>
+          <a href="Amerique/brazil.html" target="_blank">Explore Brazil</a>
         </div>
         <div class="country">
-            <img src="images/Bacalar  Mexico_ My 2024 Guide to Bacalar Lagoon.jpg" alt="Mexico">
-            <h3>Mexico</h3>
-            <p>Discover ancient ruins and beautiful beaches under the sun.</p>
-            <a href="Amerique/mexico.html">Explore Mexico</a>
+          <img src="images/mexicoDestination.jpg" alt="Mexico">
+          <h3>Mexico</h3>
+          <p>Discover ancient ruins and beautiful beaches under the sun.</p>
+          <a href="Amerique/mexico.html" target="_blank">Explore Mexico</a>
         </div>
         <div class="country">
-            <img src="images/How to Spend 3 Days in Cape Town, South Africa _ Urban Pixxels.jpg" alt="South Africa">
-            <h3>South Africa</h3>
-            <p>Explore stunning landscapes, wildlife safaris, and coastal beaches.</p>
-            <a href="Afrique/South Africa.html">Explore South Africa</a>
+          <img src="images/southAfricaDestination.jpg" alt="South Africa">
+          <h3>South Africa</h3>
+          <p>Explore stunning landscapes, wildlife safaris, and coastal beaches.</p>
+          <a href="Afrique/South Africa.html" target="_blank">Explore South Africa</a>
         </div>
       </div>
     </section>
 
-    <!-- fall Section -->
-    <section class="season fall" id="fall/">
-      <h2>fall</h2>
+    <!-- Autumn Section -->
+    <section class="season autumn" id="autumn">
+      <!-- Autumn Description -->
+      <div class="season-description">
+        <div class="description">
+          <h2>Autumn</h2>
+          <h3>Nature's Colorful Transformation</h3>
+          <p>
+            Autumn paints the world in breathtaking hues of gold, crimson, and amber. 
+            This season of transformation brings crisp air, harvest festivals, and scenic landscapes that seem straight from a painting. 
+            It's the perfect time for romantic strolls through falling leaves, wine tasting in picturesque vineyards, and exploring historic sites in comfortable weather. 
+            Autumn's magical atmosphere creates the ideal backdrop for creating lasting memories and experiencing nature's most beautiful transition.
+          </p>
+        </div>
+        <div class="description-image autumn-img"></div>
+      </div>
+
+      <!-- Countries Cards -->
       <div class="countries">
         <div class="country">
-          <img src="images/uk.jpg" alt="United Kingdom">
+          <img src="images/ukDestination.jpg" alt="United Kingdom">
           <h3>United Kingdom</h3>
           <p>Beautiful autumn colors and historical sites.</p>
           <a href="Europe/UK.html">Explore UK</a>
         </div>
         <div class="country">
-            <img src="images/spain.jpg" alt="Spain">
-            <h3>Spain</h3>
-            <p>Discover vibrant cities and beautiful beaches in mild weather.</p>
-            <a href="Europe/spain.html">Explore Spain</a>
+          <img src="images/spainDestination.jpg" alt="Spain">
+          <h3>Spain</h3>
+          <p>Discover vibrant cities and beautiful beaches in mild weather.</p>
+          <a href="Europe/spain.html">Explore Spain</a>
         </div>
         <div class="country">
-            <img src="images/Premium Photo _ Pisa leaning tower, Italy.jpg" alt="Italy">
-            <h3>Italy</h3>
-            <p>Explore scenic vineyards and enjoy fall festivals.</p>
-            <a href="Europe/italy.html">Explore Italy</a>
+          <img src="images/italyDestination.jpg" alt="Italy">
+          <h3>Italy</h3>
+          <p>Explore scenic vineyards and enjoy autumn festivals.</p>
+          <a href="Europe/italy.html">Explore Italy</a>
         </div>
         <div class="country">
-            <img src="images/The Complete China Bucket List_ 50 Incredible Things to do in China.jpg" alt="China">
-            <h3>China</h3>
-            <p>Visit ancient wonders and explore vibrant cities in the fall.</p>
-            <a href="Asie/china.html">Explore China</a>
+          <img src="images/chinaDestination.jpg" alt="China">
+          <h3>China</h3>
+          <p>Visit ancient wonders and explore vibrant cities in the autumn.</p>
+          <a href="Asie/china.html">Explore China</a>
         </div>
       </div>
     </section>
 
-    <!-- Spring Section -->
-    <section class="season spring" id="spring/">
-      <h2>Spring</h2>
+    <!-- Winter Section -->
+    <section class="season winter" id="winter">
+      <!-- Winter Description -->
+      <div class="season-description">
+        <div class="description">
+          <h2>Winter</h2>
+          <h3>Where Magic Meets Warmth</h3>
+          <p>
+            Winter is the season of intimate connections and warm hearts amidst the cold. 
+            As snow blankets the world in a peaceful silence, people naturally draw closer, seeking warmth in each other's company. 
+            It's a magical time when frosty landscapes create the perfect backdrop for cozy moments, shared laughter, and deeper bonds. 
+            The chill in the air makes every embrace more meaningful, transforming ordinary interactions into cherished memories. 
+            Winter doesn't just bring cold weather—it brings us together, reminding us that the greatest warmth comes from human connection.
+          </p>
+        </div>
+        <div class="description-image winter-img"></div>
+      </div>
+
+      <!-- Countries Cards -->
       <div class="countries">
-         <div class="country">
-            <img src="images/14 Days in Japan_ Japan Golden Route Itinerary For First Timers.jpg" alt="Japan">
-            <h3>Japan</h3>
-            <p>Experience the beauty of cherry blossoms in spring.</p>
-            <a href="Asie/japon.html">Explore Japan</a>
+        <div class="country">
+          <img src="images/canadaDestination.jpg" alt="Canada">
+          <h3>Canada</h3>
+          <p>Enjoy snowy landscapes and winter activities.</p>
+          <a href="Amerique/canada.html" target="_blank">Explore Canada</a>
         </div>
         <div class="country">
-            <img src="images/Top 10 Day Trips From Rotterdam, Netherlands.jpg" alt="Netherlands">
-            <h3>Netherlands</h3>
-            <p>Visit beautiful tulip fields and picturesque canals.</p>
-            <a href="Europe/nethrlands.html">Explore Netherlands</a>
+          <img src="images/SwitzerlandDestination.jpg" alt="Switzerland">
+          <h3>Switzerland</h3>
+          <p>Famous for its stunning Alps and winter resorts.</p>
+          <a href="Europe/switzerland.html" target="_blank">Explore Switzerland</a>
         </div>
         <div class="country">
-            <img src="images/These views through Mykonos, Greece, have me greekin’ out.jpg" alt="Greece">
-            <h3>Greece</h3>
-            <p>Explore ancient ruins and stunning islands in mild weather.</p>
-            <a href="Europe/greece.html">Explore Greece</a>
-          </div>
+          <img src="images/thailandDestination.jpg" alt="Thailand">
+          <h3>Thailand</h3>
+          <p>Enjoy warm weather and tropical beaches during winter.</p>
+          <a href="Asie/thailand.html" target="_blank">Explore Thailand</a>
+        </div>
         <div class="country">
-            <img src="images/10 Best Areas Of New York To Visit - Hand Luggage Only - Travel, Food And Photography Blog.jpg" alt="United States">
-            <h3>United States</h3>
-            <p>Explore vibrant cities and beautiful parks during springtime.</p>
-            <a href="Amerique/US.html">Explore United States</a>
+          <img src="images/dubaiDestination.jpg" alt="Dubai">
+          <h3>Dubai</h3>
+          <p>Experience luxurious winter sunshine and modern architecture.</p>
+          <a href="Afrique/dubai.html" target="_blank">Explore Dubai</a>
         </div>
       </div>
     </section>
-  </main>
-  <!-- other country with all season-->
-  <aside>
-    <section class="season all">
-      <h2>Other countries</h2>
+
+    <!-- Other Countries Section -->
+    <section class="season other" id="other">
+      <h2>All-Season Destinations</h2>
+      <!-- Other Description -->
+      <div class="season-description">
+        <div class="description">
+          <h3>Year-Round Wonders</h3>
+          <p>
+            Some destinations shine brightly no matter the season, offering unique experiences throughout the year. 
+            These versatile locations provide perfect getaways whether you're seeking spring blooms, summer adventures, autumn colors, or winter charm. 
+            From cultural hubs to natural wonders, these countries maintain their appeal year-round, ensuring memorable travels whenever you choose to visit. 
+            Discover destinations that welcome you with open arms in every season, each offering its own special magic.
+          </p>
+        </div>
+        <div class="description-image other-img"></div>
+      </div>
+
+      <!-- Countries Cards -->
       <div class="countries">
         <div class="country">
-          <img src="images/Instagramspots_ Hier findest Du die besten Fotospots in Berlin - Tobias Hoiten.jpg" alt="germany">
+          <img src="images/GermanDestination.jpg" alt="Germany">
           <h3>Germany</h3>
           <p>Discover colorful festivals, lush landscapes, and historic sites in bloom.</p>
-          <a href="Europe/germany.html ">Explore Germany</a>
+          <a href="Europe/germany.html">Explore Germany</a>
         </div>
         <div class="country">
-          <img src="images/Marrakech - Jamaa el-fna.jpg" alt="Morocco">
+          <img src="images/moroccoDestination.jpg" alt="Morocco">
           <h3>Morocco</h3>
           <p>Wander through vibrant souks and experience the desert in pleasant weather.</p>
           <a href="Afrique/morocco.html">Explore Morocco</a>
         </div>
         <div class="country">
-          <img src="images/korea.jpg" alt="South Korea">
+          <img src="images/koreaDestination.jpg" alt="South Korea">
           <h3>South Korea</h3>
           <p>Enjoy cherry blossom festivals and scenic mountain trails in springtime.</p>
           <a href="Asie/south korean.html">Explore South Korea</a>
         </div>
       </div>
-    </section>    
-  </aside>
-  <!-- footer-->
-  <footer>
-    <p>© 2024 TerraVita. Student Project for educational purposes only.</p>
-    <nav>
-        <a href="gallery.html">Gallery</a>
-        <a href="homePage.html">Home</a>
-        <a href="Contact.html">Contact</a>
-    </nav>
-    <div class="social">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-    </div>
-    <p class="footer-message">Happy Travels with TerraVita!</p>
-</footer>
+    </section>
+  </main>
+
+  <!-- Footer injected dynamically via components/footer.js -->
+  <div id="footer-container"></div>
+
+  <!-- JavaScript -->
+  <script src="components/navbar.js"></script>
+  <script src="destination.js"></script>
+  <script src="components/footer.js"></script>
 </body>
 </html>
