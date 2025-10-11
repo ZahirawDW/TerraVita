@@ -1,0 +1,64 @@
+
+/* Coming Soon Banner */
+.coming-soon-banner {
+    background-color: #f7fbff;
+    color: #d32f2f; 
+    border: 1px solid #cedae7;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 20px auto;
+}
+.coming-soon-banner i {
+    font-size: 2rem;
+    color: #007bff;
+}
+.coming-soon-banner h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+.coming-soon-banner p {
+    margin: 0;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+}
+
+/* Gallery */
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.gallery img{
+    width: 24%;
+    height: 200px;
+    margin: 15px 10px 3px 0px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    background-color: rgba(200, 221, 254, 0.811);
+}
+.gallery img:hover{
+    transform: scale(1.08);
+    box-shadow: 4px 4px 15px rgb(0, 0, 0);
+}
+
+
+
+/* For tablets (screen width up to 768px) */
+@media (max-width: 768px) {
+    .gallery {
+        flex-wrap: wrap;
+    }
+    .gallery img {
+        width: 240px;
+        height: 160px;
+        margin: 10px 5px;
+    }
+}
+ 
