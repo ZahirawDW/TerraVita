@@ -1,0 +1,98 @@
+body {
+    background-color: #e6f0f5;
+}
+.container {
+    margin: 0 auto;
+    padding: 40px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.header p:last-child{
+    font-style: italic;
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.place {
+    background-color: #ffffff;
+    text-align: center;
+    width: 45%;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.place img {
+    width: 100%;
+    height: 80vh;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+
+.place h3 { 
+    font-size: 1.6em;
+    margin: 20px 0;
+    color: #34495e;
+}
+.place p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+.activities {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1em;
+    color: #2c3e50;
+}
+.activities li {
+    margin: 8px 0;
+}
+
+/* The all season 'Other' Destinations styles */
+.season {
+    margin-bottom: 40px;
+}
+.season h2 {
+    font-size: 2.1em;
+    border-bottom: 2px solid #242c31;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* ====Media Queries==== */
+/* Mobile Small (0 - 479px) */
+@media (max-width: 479px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+    .place {
+        width: 100%;
+    }
+    .place img {
+        height: 300px;
+    }
+}
+
+/* Mobile large (480px - 767px) */  
+@media (min-width: 480px) and (max-width: 767px) {
+    .place {
+        width: 60%;
+    }
+    .place img {
+        height: 400px;
+    }
+}
