@@ -141,15 +141,25 @@ body {
   right: 20px;
 }
 
+
 /* Responsive design for smaller screens */
 /* NOTE: I use the % units so they are responsive */
 
 @media (max-width: 480px) {
   body{
     padding-right: 10px;
+    overflow-x: hidden;
+  }
+  .contact-container{
+    width: 100%;
   }
   .contact-form {
     width: 95%;
+    margin: 0 auto;
+  }
+  /* Footer */
+  footer {
+    width: 100%;
   }
 }
 

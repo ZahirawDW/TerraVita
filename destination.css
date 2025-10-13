@@ -50,6 +50,7 @@ body {
 
 .active{
     background-color: gray;
+    color: white;
 }
 
 /* Winter */

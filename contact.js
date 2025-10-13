@@ -112,6 +112,7 @@ otherOption.addEventListener('input',()=>{
         theOption.style.display = 'block';
     }else{
         theOption.style.display = 'none';
+        theOption.value = ''; // Clear the input when unchecked
     }
 })
 
