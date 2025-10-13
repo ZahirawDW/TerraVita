@@ -167,7 +167,9 @@ TerraVita/
 
 ## 🌐 Live Demo
 
-[**View Live Project**](#) - *Deployment coming soon!*
+[**View Live Project**](https://terravita.netlify.app)
+
+*Successfully deployed with Netlify - all components loading perfectly!*
 
 ## 📝 Installation & Usage
 
