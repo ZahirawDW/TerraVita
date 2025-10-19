@@ -201,4 +201,5 @@ This is a personal portfolio project demonstrating growth and technical skills. 
 **Built with passion and persistence during 28 days of intensive learning**  
 *From classroom project to portfolio masterpiece*
 
-</div>
+</div>   
+ 
