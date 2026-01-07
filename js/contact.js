@@ -21,7 +21,7 @@ const validationRules ={
         message: 'Please enter a valid location'
     },
     message:{
-        regex:/\S+/,
+        regex: /^.{10,1000}$/,
         event: 'input',
         message: 'Enter a your message'
     }
@@ -116,6 +116,17 @@ otherOption.addEventListener('input',()=>{
     }
 })
 
+// show the input if the checkbox is other
+const destinationSelect = document.getElementById('preferred-destination');
+const theOtherOption = document.getElementById('preferred-destination-other-text')
+destinationSelect.addEventListener('change',()=>{
+    if (destinationSelect.value === 'other'){
+        theOtherOption.style.display = 'block';
+    }else{
+        theOtherOption.style.display = 'none';
+        theOtherOption.value = ''; // Clear the input when unchecked
+    }
+})
 
 //  Initialize everything
 function initValidation() {
@@ -132,7 +143,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 // Final validation on submit
-document.getElementById('submit-button').addEventListener('click', function(e) {
+document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
     
     let allValid = true;

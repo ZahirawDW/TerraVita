@@ -86,6 +86,7 @@
       <!-- Enhanced: Hidden by default, shows when "Other" is checked -->
       <input type="text" id="travel-experience-other-text" name="travel-experience-other-text" placeholder="If other, please specify" required>
 
+      <!-- Preferred Destination Selection -->
       <label for="preferred-destination">Preferred Destination</label>
       <select name="preferred-destination" id="preferred-destination" required>
         <option value="" disabled selected>Select a destination</option>
@@ -95,8 +96,10 @@
         <option value="africa">Africa</option>
         <option value="australia">Australia</option>
         <option value="antarctica">Antarctica</option>
-        <option value="other">Other</option>
+        <option value="other" id="otherOption">Other</option>
       </select>
+      <!-- Enhanced: Hidden by default, shows when "Other" is Selected -->
+      <input type="text" id="preferred-destination-other-text" name="preferred-destination-other-text" placeholder="If other, please specify" required>
 
       <label for="message">Your Message</label>
       <textarea id="message" name="message" placeholder="Your message" rows="6" required></textarea>

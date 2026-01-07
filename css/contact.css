@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding-top: 50px;
+  overflow-x: hidden;
 }
 
 /* Header section */
@@ -87,7 +88,13 @@ body {
   display: none;
 }
 
+/* Preferred destination other text */
+#preferred-destination-other-text{
+  display: none;
+  margin-top: 10px;
+}
 
+/* Textarea styling */
 #message {
   resize: vertical;
 }
@@ -148,7 +155,6 @@ body {
 @media (max-width: 480px) {
   body{
     padding-right: 10px;
-    overflow-x: hidden;
   }
   .contact-container{
     width: 100%;
