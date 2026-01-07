@@ -1,0 +1,6 @@
+projectKey=terravita
+serverUrl=http://localhost:9000
+serverVersion=25.11.0.114957
+dashboardUrl=http://localhost:9000/dashboard?id=terravita
+ceTaskId=b9ee2097-3fa3-4d23-9b23-fcd5eaa97dcd
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b9ee2097-3fa3-4d23-9b23-fcd5eaa97dcd

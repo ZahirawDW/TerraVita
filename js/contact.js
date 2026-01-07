@@ -6,7 +6,7 @@ const validationRules ={
         message: 'Name must be between 2-30 letters only and no numbers'
     },
     email:{
-        regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        regex: /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/,
         event: 'input',
         message: 'Please enter a valid email address'
     },

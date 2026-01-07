@@ -55,27 +55,27 @@ body {
 
 /* Winter */
 .winter-img{
-    background: url('images/winterDestination.jpg');
+    background: url('../images/winterDestination.jpg');
 }
 
 /* Summer */
 .summer-img{
-    background: url('images/summerDestination.jpg');
+    background: url('../images/summerDestination.jpg');
 }
 
 /* Spring */
 .spring-img{
-    background: url('images/springDestination.jpg');
+    background: url('../images/springDestination.jpg');
 }
 
 /* Autumn */
 .autumn-img{
-    background: url('images/autumnDestination.jpg');
+    background: url('../images/autumnDestination.jpg');
 }
 
 /* Other */
 .other-img{
-    background: url('images/otherDestination.jpg');
+    background: url('../images/otherDestination.jpg');
 }
 .other h2{
     margin-left: 15%;

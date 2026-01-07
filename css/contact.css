@@ -1,6 +1,6 @@
 /* basics body style with fixed background */
 body {
-  background-image: url('images/contactBackground.jpg');
+  background-image: url('../images/contactBackground.jpg');
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
@@ -127,7 +127,7 @@ body {
 }
 /* Dark mode styles */
 .dark-mode{
-  background-image: url('images/contactBackgroundDark.jpg');
+  background-image: url('../images/contactBackgroundDark.jpg');
 }
 .dark-mode .contact-form{
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
