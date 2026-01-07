@@ -154,18 +154,17 @@ body {
 
 @media (max-width: 480px) {
   body{
-    padding-right: 10px;
+    width: 100%; 
+    box-sizing: border-box;
   }
   .contact-container{
-    width: 100%;
-  }
-  .contact-form {
-    width: 95%;
+    width: 90%; 
+    overflow-x: hidden; 
     margin: 0 auto;
   }
   /* Footer */
   footer {
-    width: 100%;
+    margin-top: 10px;
   }
 }
 

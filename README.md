@@ -48,17 +48,19 @@ TerraVita/
 ├── README.md
 ├── TerraVitaLogo.jpeg
 ├── index.html              # Main homepage
-├── index.css               # Homepage styles
-├── index.js                # Homepage JavaScript
 ├── Contact.html            # Contact form page
-├── contact.css             # Contact form styles
-├── contact.js              # Contact form validation
 ├── destination.html        # Seasonal destinations page
-├── destination.css         # Destination page styles
-├── destination.js          # Seasonal filtering logic
 ├── gallery.html            # Travel inspiration gallery
-├── gallery.css             # Gallery layout styles
-├── gallery.js              # Gallery interactions
+├── css/                    # Stylesheets
+|   ├── index.css           # Homepage styles
+|   ├── destination.css     # Destination page styles
+|   ├── contact.css         # Contact page styles
+|   └── gallery.css         # Gallery layout styles
+├── js/                     # JavaScript files
+|   ├── index.js                # Homepage JavaScript
+|   ├── contact.js              # Contact form validation
+|   ├── destination.js          # Destination interactivity
+|   └── gallery.js               # Gallery interactivity
 ├── components/             # Reusable components
 │   ├── navbar.html         # Navigation structure
 │   ├── navbar.css          # Navigation styles
@@ -68,27 +70,27 @@ TerraVita/
 │   └── countriesStyle.css  # Shared country page styles
 ├── images/                 # All project images
 │   └── [multiple image files]
-├── Afrique/                # African destinations
-│   ├── South Africa.html
+├── Africa/                # African destinations
+│   ├── South-Africa.html
 │   ├── dubai.html
 │   ├── morocco.html
 │   └── seychelles.html
-├── Amerique/               # American destinations
+├── America/               # American destinations
 │   ├── US.html
 │   ├── brazil.html
 │   ├── canada.html
 │   └── mexico.html
-├── Asie/                   # Asian destinations
+├── Asia/                   # Asian destinations
 │   ├── china.html
-│   ├── japon.html
-│   ├── south korean.html
+│   ├── japan.html
+│   ├── south-korean.html
 │   └── thailand.html
 └── Europe/                 # European destinations
     ├── UK.html
     ├── germany.html
     ├── greece.html
     ├── italy.html
-    ├── nethrlands.html
+    ├── netherlands.html
     ├── spain.html
     └── switzerland.html
 ```
@@ -188,6 +190,13 @@ open index.html
 
 This is a personal portfolio project demonstrating growth and technical skills. While not open for contributions, I'm always open to networking and learning opportunities!
 
+---
+
+## 📞 Contact
+
+For questions about this project or potential collaborations:
+- **LinkedIn**: [Zahira El-Mahjour](https://www.linkedin.com/in/zahira-el-mahjour)
+- **GitHub**: [@ZahirawDW](https://github.com/ZahirawDW)
 
 ---
 
@@ -195,11 +204,17 @@ This is a personal portfolio project demonstrating growth and technical skills. 
 
 **"This project represents my 28-day commitment to transforming a basic school assignment into a professional-grade web application. Every line of code tells a story of growth, problem-solving, and technical evolution."**
 
+## 🎯 Why This Project Matters
+This project demonstrates my ability to:
+- Take basic requirements and expand them into professional solutions
+- Learn new technologies independently
+- Solve complex frontend challenges without frameworks
+- Document and present technical work effectively
+
 ---
 <div align="center">
 
 **Built with passion and persistence during 28 days of intensive learning**  
 *From classroom project to portfolio masterpiece*
 
-</div>   
- 
+</div> 
